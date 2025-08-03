@@ -6,11 +6,11 @@ import { useState } from "react";
 type Props = {
     children: React.ReactNode
 }
-const Cat = ({children}:Props) => {
+const TanStackProvider = ({children}:Props) => {
     const [qClient] = useState(()=>new QueryClient())
     return(
     <QueryClientProvider client={qClient}>{children}</QueryClientProvider>
     );
 }
 
-export default Cat
+export default TanStackProvider
